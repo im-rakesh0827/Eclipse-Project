@@ -1,0 +1,12 @@
+@charset "UTF-8";
+body{
+	margin:0;
+	background-repeat:no-repeat;
+	backgroun-image:url("https://www.wallpapers13.com/amazing-sunset-hd-desktop-background-507018/");
+	background-size
+}
+
+h1{
+	color:red;
+	
+}

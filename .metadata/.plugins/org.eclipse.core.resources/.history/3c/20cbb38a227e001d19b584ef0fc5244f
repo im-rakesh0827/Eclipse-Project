@@ -1,0 +1,23 @@
+@charset "UTF-8";
+body{
+	margin:0;
+	background-image: url('vote.jpg');
+	background-repeat:no-repeat;
+	background-image:cover;
+}
+
+nav{
+	background-color:blue;
+	font-size:30px;
+	color:white;
+	display:flex;
+	justify-content:right;
+	padding-top:20px;
+	padding-bottom:20px;
+}
+
+nav a{
+	color:white;
+	padding:
+	
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Online Voting System</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+	<nav>
+		<a href="/index.jsp">Home</a>
+		<a href="/index.jsp">About</a>
+		<a href="/index.jsp">Contact</a>
+	</nav>
+	<form>
+	
+		<h2>Enter Your Voter Id Number : </h2>
+		<br>
+		
+	
+	</form>
+</body>
+</html>

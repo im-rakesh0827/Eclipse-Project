@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<servers>
+  <server auto-publish-setting="2" auto-publish-time="1" configuration-id="/Servers/apache-tomcat-10.0.23 at localhost-config" deployDir="wtpwebapps" hostname="localhost" id="apache-tomcat-10.0.23 at localhost" name="apache-tomcat-10.0.23 at localhost" runtime-id="apache-tomcat-10.0.23" server-type="org.eclipse.jst.server.tomcat.100" server-type-id="org.eclipse.jst.server.tomcat.100" start-timeout="60" stop-timeout="15" testEnvironment="true" timestamp="6">
+    <list key="modules" value0="Registration::org.eclipse.jst.jee.server:Registration::jst.web::5.0" value1="Login::org.eclipse.jst.jee.server:Login::jst.web::5.0" value2="UserManagement::org.eclipse.jst.jee.server:UserManagement::jst.web::5.0" value3="StoreData::org.eclipse.jst.jee.server:StoreData::jst.web::5.0" value4="Hello Servlet::org.eclipse.jst.jee.server:Hello Servlet::jst.web::5.0" value5="RegForm::org.eclipse.jst.jee.server:RegForm::jst.web::5.0" value6="LoginDemo::org.eclipse.jst.jee.server:LoginDemo::jst.web::5.0" value7="Online-Voting-System::org.eclipse.jst.jee.server:Online-Voting-System::jst.web::5.0"/>
+  </server>
+</servers>

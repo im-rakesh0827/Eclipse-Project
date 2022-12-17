@@ -1,0 +1,13 @@
+@charset "UTF-8";
+body{
+	margin:0;
+	
+	background-image: url('vote.jpg');
+	background-repeat:no-repeat;
+	background-imgage:cover;
+}
+
+h1{
+	color:red;
+	
+}

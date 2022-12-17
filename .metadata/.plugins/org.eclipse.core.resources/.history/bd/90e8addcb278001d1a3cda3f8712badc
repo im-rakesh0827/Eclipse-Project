@@ -1,0 +1,10 @@
+/**
+ * 
+ */
+/**
+ * @author rakeshkumar
+ *
+ */
+module TicTacToeGame {
+	requires java.desktop;
+}

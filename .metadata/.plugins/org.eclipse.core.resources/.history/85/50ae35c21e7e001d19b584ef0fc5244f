@@ -1,0 +1,10 @@
+@charset "UTF-8";
+body{
+	margin:0;
+	backgroun-image:url("");
+}
+
+h1{
+	color:red;
+	
+}

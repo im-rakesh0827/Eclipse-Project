@@ -1,0 +1,180 @@
+package com.xadmin.usermanagement.dao;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.apache.catalina.User;
+
+import com.xadmin.usermanagement.bean.UserBean;
+
+
+
+public class UserDao {
+	private String dbUrl = "jdbc:mysql://localhost:3306/userdb";
+	private String dbUname = "root";
+	private String dbPassword = "Apple@0827";
+	private String dbDriver = "com.mysql.cj.jdbc.Driver";
+	
+	private static final String INSERT_USERS_SQL = "INSERT INTO users" + "  (name, email, country) VALUES "
+			+ " (?, ?, ?);";
+
+	private static final String SELECT_USER_BY_ID = "select id,name,email,country from users where id =?";
+	private static final String SELECT_ALL_USERS = "select * from users";
+	private static final String DELETE_USERS_SQL = "delete from users where id = ?;";
+	private static final String UPDATE_USERS_SQL = "update users set name = ?,email= ?, country =? where id = ?;";
+	
+	
+	protected Connection getConnection(){
+		Connection con = null;
+		try {
+			Class.forName(dbDriver);
+			con = DriverManager.getConnection(dbUrl, dbUname, dbPassword);
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return con;
+	}
+	
+	
+	//						INSERT USER
+	public void insertUser(UserBean user) throws SQLException{
+		System.out.println(INSERT_USERS_SQL);
+		Connection con = getConnection();
+		try {
+			PreparedStatement ps = con.prepareStatement(INSERT_USERS_SQL);
+			ps.setString(1, user.getName());
+			ps.setString(2, user.getEmail());
+			ps.setString(3, user.getCountry());
+			System.out.println(ps);
+			ps.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+
+	
+	
+	//						SELECT USER BY ID
+	public User selectUser(int id) {
+		UserBean user = null;
+		Connection con = getConnection();
+		
+		try {
+			PreparedStatement ps = con.prepareStatement(SELECT_USER_BY_ID);
+			ps.setInt(1, id);
+			System.out.println(ps);
+			ResultSet rs = ps.executeQuery();
+			
+			while(rs.next()) {
+				String name = rs.getString("name");
+				String email = rs.getString("email");
+				String country = rs.getString("country");
+				user = new UserBean(id, name, email, country);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+			printSQLException(e);
+		}
+		return user;
+	}
+	
+	
+	
+	//					 		SELECT ALL USER
+	public List<UserBean> selectAllUser() {
+		
+		List<UserBean> users = new ArrayList<>();
+		Connection con = getConnection();
+		
+		try {
+			PreparedStatement ps = con.prepareStatement(SELECT_ALL_USERS);
+			System.out.println(ps);
+			ResultSet rs = ps.executeQuery();
+			
+			while(rs.next()) {
+				int id = rs.getInt("id");
+				String name = rs.getString("name");
+				String email = rs.getString("email");
+				String country = rs.getString("country");
+				users.add(new UserBean(id, name, email, country));
+				
+			}
+		} catch (SQLException e) {
+			
+			e.printStackTrace();
+			printSQLException(e);
+		}	
+		return users;
+		
+	}
+	
+	
+	
+	//						UPDATE USER
+	public boolean updateUser(UserBean user) {
+		boolean rowUpdated = false;
+		Connection con = getConnection();
+		try {
+			PreparedStatement ps = con.prepareStatement(UPDATE_USERS_SQL);
+			System.out.println("Updated User : "+ps);
+			ps.setString(1, user.getName());
+			ps.setString(2, user.getEmail());
+			ps.setString(3, user.getCountry());
+			ps.setInt(4, user.getId());
+			if(ps.executeUpdate()>0) rowUpdated = true;
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+			printSQLException(e);
+		}
+		return rowUpdated;
+	}
+	
+	
+	
+	
+	//					DELETE USER BY ID
+	public boolean deleteUser(int id) {
+		boolean rowDeleted = false;
+		Connection con = getConnection();
+		try {
+			PreparedStatement ps = con.prepareStatement(DELETE_USERS_SQL);
+
+			ps.setInt(1, id);
+			if(ps.executeUpdate()>0) rowDeleted = true;
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+			printSQLException(e);
+		}
+		return rowDeleted;
+	}
+	
+	
+	
+	private void printSQLException(SQLException ex) {
+		for(Throwable e:ex) {
+			if(e instanceof SQLException) {
+				e.printStackTrace(System.err);
+				System.err.println("SQLState"+((SQLException)e).getSQLState());
+				System.err.println("Error Code"+((SQLException)e).getErrorCode());
+				System.err.println("Message"+((SQLException)e).getMessage());
+				Throwable t = ex.getCause();
+				while(t!=null) {
+					System.out.println("Cause"+t);
+					t = t.getCause();
+				}
+			}
+			
+		}
+		
+	}
+	
+}
