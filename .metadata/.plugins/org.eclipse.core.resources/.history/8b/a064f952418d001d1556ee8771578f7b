@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registration Form</title>
+        <link rel="stylesheet" href="registrationvoter.css" type="text/css">
+        <link rel="stylesheet" href="navbar.css" type="text/css">
+        <link rel="stylesheet" href="footer.css" type="text/css">
+
+        <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+        <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+        <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    </head>
+    <body>
+
+        <header>
+            <img class="logo" src="/icons/vote.png" alt="logo">
+            <nav>
+                <ul class="nav_links">
+                    <li><a href="index.html"><i class="fa fa-home fa-fw"></i>Home</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="career.html">Career</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="support.html">Support</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="main">
+            <div class="register">
+                <br><br>
+                <h2>Voter Registration</h2>
+                <form id="register" method="post" action="register.jsp">
+                    <label for="">Name : </label>
+                    <br>
+                    <input type="text" name="fullName" id="name" placeholder="Enter Your Full Name">
+                    <br> <br>
+                    <label for="">Email : </label>
+                    <br>
+                    <input type="email" name="email" id="name" placeholder="Enter Valid Email">
+                    <br><br>
+                    <label for="">Phone : </label>
+                    <br>
+                    <input type="number" name="phone" id="name" placeholder="Enter Valid Phone">
+                    <br><br>
+                    <label for="">Your Age : </label>
+                    <br>
+                    <input type="number" name="age" id="name" placeholder="How Old Are You ?">
+                    <br><br>
+                    <label for="">Aadhar : </label>
+                    <br>
+                    <input type="number" name="aadhar" id="name" placeholder="Enter Your Aadhar Number">
+                    <br><br>
+                    <label for="">Voter Id : </label>
+                    <br>
+                    <input type="number" name="voterId" id="name" placeholder="Enter Your Voter Id">
+                    <br><br>
+                    <label for="">Gender : </label>
+                    &nbsp;&nbsp;&nbsp;
+                    <input type="radio" name="gender" value="Male" id="male">&nbsp;&nbsp;<span id="male">Male</span>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio" name="gender" Value="Female" id="female">&nbsp;&nbsp;<span id="female">Female</span>
+                    <br><br>
+                    <label for="">Passwrod : </label>
+                    <br>
+                    <input type="text" name="password" id="name" placeholder="Enter Valid Email">
+                    <br><br>
+                    <label for="">Confirm Passwrod : </label>
+                    <br>
+                    <input type="password" name="confirmPassword" id="name" placeholder="Enter Valid Email">
+                    <br><br>
+
+                    <input type="submit" value="Submit" name="submit" id="submit">
+                    <input type="submit" value="Cancel" name="submit" id="submit">
+
+                </form>
+            </div>
+        </div>
+        
+
+        <footer>
+            <div class="waves">
+                <div class="wave" id="wave1"></div>
+                <div class="wave" id="wave2"></div>
+                <div class="wave" id="wave3"></div>
+                <div class="wave" id="wave4"></div>
+            </div>
+            <ul class="social_icon">
+                <li><a href=""><ion-icon name="logo-facebook"></ion-icon></a></li>
+                <li><a href=""><ion-icon name="logo-twitter"></ion-icon></a></li>
+                <li><a href=""><ion-icon name="logo-linkedin"></ion-icon></a></li>
+                <li><a href=""><ion-icon name="logo-instagram"></ion-icon></a></li>
+                <li><a href=""><ion-icon name="logo-youtube"></ion-icon></a></li>
+            </ul>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="career.html">Career</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="support.html">Support</a></li>
+            </ul>
+            <p>E-Voting System All Right Reserved Copyright © 2022</p>
+        </footer>
+        <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+        <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    </body>
+</html>

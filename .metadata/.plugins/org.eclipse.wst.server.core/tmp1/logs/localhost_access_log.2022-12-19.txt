@@ -1,0 +1,5 @@
+127.0.0.1 - - [19/Dec/2022:15:39:08 +0530] "GET / HTTP/1.1" 404 752
+0:0:0:0:0:0:0:1 - - [19/Dec/2022:15:39:09 +0530] "GET /Online-Voting-System/ HTTP/1.1" 200 460
+0:0:0:0:0:0:0:1 - - [19/Dec/2022:15:39:09 +0530] "GET /Online-Voting-System/styles.css HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [19/Dec/2022:15:39:09 +0530] "GET /Online-Voting-System/vote.jpg HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [19/Dec/2022:15:39:15 +0530] "GET /index.jsp HTTP/1.1" 404 740

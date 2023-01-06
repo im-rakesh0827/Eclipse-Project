@@ -1,0 +1,10 @@
+127.0.0.1 - - [24/Dec/2022:00:08:14 +0530] "GET / HTTP/1.1" 404 752
+0:0:0:0:0:0:0:1 - - [24/Dec/2022:00:08:16 +0530] "GET /Online-Voting-System/ HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [24/Dec/2022:00:08:16 +0530] "GET /Online-Voting-System/styles.css HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [24/Dec/2022:00:08:16 +0530] "GET /Online-Voting-System/vote.jpg HTTP/1.1" 200 116682
+0:0:0:0:0:0:0:1 - - [24/Dec/2022:00:08:16 +0530] "GET /apple-touch-icon-precomposed.png HTTP/1.1" 404 784
+0:0:0:0:0:0:0:1 - - [24/Dec/2022:00:08:16 +0530] "GET /apple-touch-icon.png HTTP/1.1" 404 772
+0:0:0:0:0:0:0:1 - - [24/Dec/2022:00:08:20 +0530] "GET /index.jsp HTTP/1.1" 404 740
+127.0.0.1 - - [24/Dec/2022:14:45:43 +0530] "GET / HTTP/1.1" 404 752
+0:0:0:0:0:0:0:1 - - [24/Dec/2022:14:45:45 +0530] "GET /Online-Voting-System/ HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [24/Dec/2022:14:45:49 +0530] "GET /index.jsp HTTP/1.1" 404 740

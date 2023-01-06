@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    /* background-color: rgb(98, 98, 132); */
+}
+
+
+li,
+a,
+button {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+header {
+    background-color: rgb(49, 49, 46);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5px 0%;
+}
+
+.logo {
+    cursor: pointer;
+    height: 60px;
+    width: 60px;
+}
+
+.nav_links {
+    list-style: none;
+}
+
+.nav_links li {
+    display: inline-block;
+    padding: 0 20px;
+    margin-right: auto;
+
+}
+
+.nav_links li a {
+    font-size: 25px;
+    transition: all 0.3s ease 0s;
+}
+
+.nav_links li :hover {
+    color: rgb(21, 127, 106);
+}

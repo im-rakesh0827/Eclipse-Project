@@ -1,0 +1,8 @@
+127.0.0.1 - - [27/Dec/2022:17:19:26 +0530] "GET / HTTP/1.1" 404 752
+0:0:0:0:0:0:0:1 - - [27/Dec/2022:17:19:28 +0530] "GET /Online-Voting-System/registration.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [27/Dec/2022:17:19:28 +0530] "GET /Online-Voting-System/registration.css HTTP/1.1" 200 1533
+0:0:0:0:0:0:0:1 - - [27/Dec/2022:17:20:25 +0530] "POST /Online-Voting-System/registerForm.jsp HTTP/1.1" 200 173
+0:0:0:0:0:0:0:1 - - [27/Dec/2022:17:23:38 +0530] "POST /Online-Voting-System/registerForm.jsp HTTP/1.1" 200 171
+127.0.0.1 - - [27/Dec/2022:17:31:07 +0530] "GET / HTTP/1.1" 404 752
+127.0.0.1 - - [27/Dec/2022:17:31:24 +0530] "GET / HTTP/1.1" 404 752
+0:0:0:0:0:0:0:1 - - [27/Dec/2022:17:31:32 +0530] "POST /Online-Voting-System/registerForm.jsp HTTP/1.1" 200 167

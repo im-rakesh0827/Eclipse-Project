@@ -21,7 +21,7 @@ public class TicTacToe {
 	
 	private int xCount1 = 0;
 	private int oCount1 = 0;
-	private String startGame = "X";
+	private String startGame = "O";
 	private int b1 = 10;
 	private int b2 = 10;
 	private int b3 = 10;
@@ -34,12 +34,9 @@ public class TicTacToe {
 	private int i = 0;
 
 	private JLabel xCount;
+	private JLabel oCount;
 	
-
-
-	/**
-	 * Launch the application.
-	 */
+	
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -53,25 +50,29 @@ public class TicTacToe {
 		});
 	}
 
-	/**
-	 * Create the application.
-	 */
 	public TicTacToe() {
 		initialize();
 	}
+	
+	public void playerScore() {
+        xCount.setText(String.valueOf(xCount1));
+        oCount.setText(String.valueOf(oCount1));
+    }
+	
+	
 	
 	private void winningGame() {
 //		For Player X : 
 		if(b1==1 && b2==1 && b3==1) {
 			JOptionPane.showMessageDialog(frame, "Player X Wins : ", "Tic Tac Toe", JOptionPane.INFORMATION_MESSAGE);
-			xCount1++;
-			xCount.setText(String.valueOf(xCount1));
+//			xCount1++;
+			playerScore();
 		}
 		
 		else if(b4==1 && b5==1 && b6==1) {
 			JOptionPane.showMessageDialog(frame, "Player X Wins : ", "Tic Tac Toe", JOptionPane.INFORMATION_MESSAGE);
 			xCount1++;
-			xCount.setText(String.valueOf(xCount1));
+			playerScore();
 		}
 		else if(b7==1 && b8==1 && b9==1) {
 			JOptionPane.showMessageDialog(frame, "Player  Wins : ", "Tic Tac Toe", JOptionPane.INFORMATION_MESSAGE);
@@ -120,7 +121,7 @@ public class TicTacToe {
 		else if(b1==0 && b2==0 && b3==0) {
 			JOptionPane.showMessageDialog(frame, "Player O Wins : ", "Tic Tac Toe", JOptionPane.INFORMATION_MESSAGE);
 			xCount1++;
-			xCount.setText(String.valueOf(xCount1));
+			playerScore();
 		}
 		
 		else if(b4==0 && b5==0 && b6==0) {
@@ -173,9 +174,7 @@ public class TicTacToe {
 		else startGame = "X";
 	}
 
-	/**
-	 * Initialize the contents of the frame.
-	 */
+
 	private void initialize() {
 		frame = new JFrame();
 		frame.setBounds(100, 100,600, 400);
@@ -270,18 +269,27 @@ public class TicTacToe {
 		panel.add(panel_4);
 		panel_4.setLayout(new BorderLayout(0, 0));
 		
-		JButton btnNewButton_3 = new JButton("PLAYER X");
-		btnNewButton_3.setFont(new Font("Lucida Grande", Font.PLAIN, 22));
-		panel_4.add(btnNewButton_3, BorderLayout.CENTER);
+		JButton playerX = new JButton("PLAYER X");
+		playerX.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		playerX.setFont(new Font("Lucida Grande", Font.PLAIN, 22));
+		panel_4.add(playerX, BorderLayout.CENTER);
 		
 		JPanel panel_5 = new JPanel();
 		panel_5.setBorder(new LineBorder(new Color(0, 0, 0)));
 		panel.add(panel_5);
 		panel_5.setLayout(new BorderLayout(0, 0));
 		
-		JButton xCount = new JButton("0");
-		xCount.setFont(new Font("Lucida Grande", Font.BOLD, 25));
-		panel_5.add(xCount, BorderLayout.CENTER);
+		JButton scorePlayerX = new JButton("0");
+		scorePlayerX.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				JOptionPane.showMessageDialog(frame, "Player X Scoer : ", "Score Board", JOptionPane.ERROR_MESSAGE);
+			}
+		});
+		scorePlayerX.setFont(new Font("Lucida Grande", Font.BOLD, 25));
+		panel_5.add(scorePlayerX, BorderLayout.CENTER);
 		
 		JPanel panel_7 = new JPanel();
 		panel_7.setBorder(new LineBorder(new Color(0, 0, 0)));
@@ -367,18 +375,18 @@ public class TicTacToe {
 		panel.add(panel_9);
 		panel_9.setLayout(new BorderLayout(0, 0));
 		
-		JButton btnNewButton_8 = new JButton("PLAYER O");
-		btnNewButton_8.setFont(new Font("Lucida Grande", Font.PLAIN, 22));
-		panel_9.add(btnNewButton_8, BorderLayout.CENTER);
+		JButton playerO = new JButton("PLAYER O");
+		playerO.setFont(new Font("Lucida Grande", Font.PLAIN, 22));
+		panel_9.add(playerO, BorderLayout.CENTER);
 		
 		JPanel panel_10 = new JPanel();
 		panel_10.setBorder(new LineBorder(new Color(0, 0, 0)));
 		panel.add(panel_10);
 		panel_10.setLayout(new BorderLayout(0, 0));
 		
-		JButton oCount = new JButton("0");
-		oCount.setFont(new Font("Lucida Grande", Font.BOLD, 25));
-		panel_10.add(oCount, BorderLayout.CENTER);
+		JButton scorePlayerO = new JButton("0");
+		scorePlayerO.setFont(new Font("Lucida Grande", Font.BOLD, 25));
+		panel_10.add(scorePlayerO, BorderLayout.CENTER);
 		
 		JPanel panel_11 = new JPanel();
 		panel_11.setBorder(new LineBorder(new Color(0, 0, 0)));

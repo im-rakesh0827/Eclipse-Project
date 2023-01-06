@@ -1,0 +1,12 @@
+127.0.0.1 - - [01/Jan/2023:23:05:39 +0530] "GET / HTTP/1.1" 404 752
+0:0:0:0:0:0:0:1 - - [01/Jan/2023:23:05:43 +0530] "GET /Online-Voting-System/ProjectFiles/index.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [01/Jan/2023:23:05:43 +0530] "GET /Online-Voting-System/ProjectFiles/styles.css HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [01/Jan/2023:23:05:44 +0530] "GET /Online-Voting-System/ProjectFiles/footer.css HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [01/Jan/2023:23:05:44 +0530] "GET /icons/vote.png HTTP/1.1" 404 770
+0:0:0:0:0:0:0:1 - - [01/Jan/2023:23:05:44 +0530] "GET /icons/Voting.jpg HTTP/1.1" 404 772
+0:0:0:0:0:0:0:1 - - [01/Jan/2023:23:05:46 +0530] "GET /icons/vote.png HTTP/1.1" 404 770
+0:0:0:0:0:0:0:1 - - [01/Jan/2023:23:05:46 +0530] "GET /icons/Voting.jpg HTTP/1.1" 404 772
+0:0:0:0:0:0:0:1 - - [01/Jan/2023:23:05:46 +0530] "GET /wave.png HTTP/1.1" 404 760
+0:0:0:0:0:0:0:1 - - [01/Jan/2023:23:05:46 +0530] "GET /icons/FrontVote1.png HTTP/1.1" 404 776
+0:0:0:0:0:0:0:1 - - [01/Jan/2023:23:05:49 +0530] "GET /apple-touch-icon-precomposed.png HTTP/1.1" 404 784
+0:0:0:0:0:0:0:1 - - [01/Jan/2023:23:05:49 +0530] "GET /apple-touch-icon.png HTTP/1.1" 404 772

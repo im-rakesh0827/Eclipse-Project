@@ -22,8 +22,8 @@ public class LoginServlet extends HttpServlet {
 			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/rakesh", "root", "Apple@0827");
 			String name = request.getParameter("txtName");
 			String password = request.getParameter("txtPwd");
-			
-			PreparedStatement ps = con.prepareStatement("select uname from login where uname=? and password=?");
+			String query = "select uname from login where uname=? and password=?";
+			PreparedStatement ps = con.prepareStatement(query);
 			ps.setString(1, name);
 			ps.setString(2, password);
 			
