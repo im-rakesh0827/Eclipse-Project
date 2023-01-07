@@ -23,19 +23,36 @@ try{
 	con = DriverManager.getConnection(DBURL, USERNAME, PASSWORD);
 	String vId = request.getParameter("voterId");
 	String pwd = request.getParameter("password");
-	String query = "select * from voter where voterId=? and password=?";
-	ps = con.prepareStatement(query);
-	ps.setString(1, vId);
-	ps.setString(2, pwd);
-	rs = ps.executeQuery();
-	
-	if(rs.next()){
-		out.print("<h1>You Have Logged In Successfully...<h1>");
-		RequestDispatcher rd = request.getRequestDispatcher("");
-		rd.forward(request, response);
+	if(vId.isEmpty() || pwd.isEmpty()){
+		JOptionPane.showMessageDialog(
+				null,
+				"Missing Details",
+				"Try Again",
+				JOptionPane.ERROR_MESSAGE
+				);
+		
 	}else{
-		out.print("<h1>Login failed...<h1>");
-		out.print("<h2>Invalid Login Credential...<h2>");
+		String query = "select * from voter where voterId=? and password=?";
+		ps = con.prepareStatement(query);
+		ps.setString(1, vId);
+		ps.setString(2, pwd);
+		rs = ps.executeQuery();
+		
+		if(rs.next()){
+			out.print("<h1>You Have Logged In Successfully...<h1>");
+			/* RequestDispatcher rd = request.getRequestDispatcher("");
+			rd.forward(request, response); */
+		}else{
+			/* out.print("<h1>Login failed...<h1>");
+			out.print("<h2>Invalid Login Credential...<h2>"); */
+			
+			JOptionPane.showMessageDialog(
+					null,
+					"Invalid Login Credential !",
+					"Try Again",
+					JOptionPane.ERROR_MESSAGE
+					);
+		}
 	}
 
 }catch(Exception e){
